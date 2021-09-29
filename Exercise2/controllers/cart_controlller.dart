@@ -1,7 +1,8 @@
 import '../models/cart_model.dart';
 
 class CartController {
-  int minTotalForShippingFree = 500;
+  int minTotalForShippingFree =
+      500; // The minimum price for having shipping free
 
   addItemInCart(product) {
     // Validate if the product alredy exist in the cart
@@ -19,7 +20,8 @@ class CartController {
 
   changeQtyItemInCart(productId) {
     // Change the qty in the cart
-    var indexCart = cart.indexWhere((cart) => cart["id"] == productId);
+    var indexCart = cart.indexWhere((cart) =>
+        cart["id"] == productId); // get the index of the cart by the product id
     cart[indexCart]["qty"] = cart[indexCart]["qty"] + 1;
   }
 
@@ -41,7 +43,7 @@ class CartController {
 
   getTotalQty() {
     num totalQtyIncart = 0;
-    int itemsInCart = cart.length;
+    int itemsInCart = cart.length; // Number of products in the cart
     for (int i = 0; i < itemsInCart; i++) {
       totalQtyIncart += cart[i]["qty"];
     }
