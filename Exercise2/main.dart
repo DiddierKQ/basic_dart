@@ -7,7 +7,7 @@ void main() {
 }
 
 cartFunctions() {
-
+  // Instance
   CartController cartController = CartController();
   
   cartController.addItemInCart(products[1]);
