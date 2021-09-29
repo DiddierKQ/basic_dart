@@ -2,13 +2,13 @@ import 'controllers/cart_controlller.dart';
 import 'models/cart_model.dart';
 import 'models/products_model.dart';
 
-CartController cartController = CartController();
-
 void main() {
   cartFunctions();
 }
 
 cartFunctions() {
+
+  CartController cartController = CartController();
   
   cartController.addItemInCart(products[1]);
   cartController.addItemInCart(products[1]);
@@ -29,7 +29,7 @@ cartFunctions() {
   print("The final result is: ");
   print("Products: $products");
   print("Cart: $cart");
-  
+
 }
 
 
